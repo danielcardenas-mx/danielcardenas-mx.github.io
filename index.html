@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daniel Cárdenas · Senior Scrum Master · AI-Enabled Delivery</title>
+<meta name="description" content="Daniel Cárdenas — Senior Scrum Master with 14 years in IT. Delivery metrics, flow visibility and AI adoption for software teams. Guadalajara, Mexico.">
+<style>
+:root{
+  --chrome:#1e1f24; --chrome-2:#2a2c33; --chrome-ink:#c9ccd4; --chrome-dim:#8a8f9c;
+  --accent:#1f6f7a; --accent-2:#5fc3cf; --ink:#1c1d21; --ink-2:#4a4e57; --dim:#777c86;
+  --paper:#fbfbf9; --rule:#e3e3de; --card:#ffffff;
+  --mono:ui-monospace,"SF Mono","JetBrains Mono",Menlo,Consolas,monospace;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:64px}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-underline-offset:3px}
+a:hover{color:#134c54}
+html[lang="en"] [data-l="es"],html[lang="es"] [data-l="en"]{display:none!important}
+
+/* top bar */
+.bar{position:sticky;top:0;z-index:10;background:var(--chrome);color:var(--chrome-ink);font:13px/1 var(--mono);display:flex;align-items:stretch;border-bottom:1px solid #000}
+.dots{display:flex;gap:7px;align-items:center;padding:0 16px}
+.dots i{width:11px;height:11px;border-radius:50%;background:#ff5f57}.dots i:nth-child(2){background:#febc2e}.dots i:nth-child(3){background:#28c840}
+.file{display:flex;align-items:center;padding:0 16px;background:var(--chrome-2);color:#fff;border-right:1px solid #000;white-space:nowrap}
+.file b{color:var(--accent-2);font-weight:400;margin-right:8px}
+.bar nav{display:flex;overflow-x:auto;scrollbar-width:none}
+.bar nav::-webkit-scrollbar{display:none}
+.bar nav a{color:var(--chrome-dim);text-decoration:none;padding:15px 14px;white-space:nowrap;border-bottom:2px solid transparent}
+.bar nav a:hover,.bar nav a.on{color:#fff;border-bottom-color:var(--accent-2)}
+.lang{margin-left:auto;display:flex;align-items:center;padding:0 12px;gap:2px}
+.lang button{font:inherit;background:none;border:1px solid transparent;color:var(--chrome-dim);padding:5px 8px;border-radius:4px;cursor:pointer}
+html[lang="en"] .lang [data-set="en"],html[lang="es"] .lang [data-set="es"]{color:#fff;border-color:#4b4f59;background:var(--chrome-2)}
+
+/* layout */
+main{max-width:860px;margin:0 auto;padding:0 28px}
+.hero{display:grid;grid-template-columns:160px 1fr;gap:32px;align-items:center;padding:72px 0 48px;border-bottom:1px solid var(--rule)}
+.avatar{width:160px;height:160px;border-radius:16px;object-fit:cover;object-position:center top;background:#fff;border:1px solid var(--rule);display:block}
+h1{font-size:44px;line-height:1.1;margin:0 0 8px;letter-spacing:-.02em}
+.role{font-size:20px;color:var(--ink-2);margin:0 0 6px}
+.meta{font:14px/1.5 var(--mono);color:var(--dim);margin:0 0 18px}
+.open{display:inline-block;font-size:15px;background:#e8f3f4;color:#134c54;border:1px solid #c7e2e5;border-radius:8px;padding:8px 12px;margin:0 0 18px}
+.open strong{font-weight:600}
+.links{display:flex;flex-wrap:wrap;gap:10px;margin:0;padding:0;list-style:none}
+.links a{display:inline-flex;align-items:center;gap:8px;font:14px/1 var(--mono);text-decoration:none;color:var(--ink);border:1px solid var(--rule);background:var(--card);padding:10px 14px;border-radius:8px}
+.links a:hover{border-color:var(--accent);color:var(--accent)}
+.links svg{width:16px;height:16px;fill:currentColor}
+
+section{padding:52px 0;border-bottom:1px solid var(--rule)}
+section:last-of-type{border-bottom:0}
+.label{font:13px/1 var(--mono);color:var(--accent);margin:0 0 6px}
+h2{font-size:28px;margin:0 0 22px;letter-spacing:-.01em}
+p{margin:0 0 16px}
+
+.keys{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:26px 0 0}
+.key{background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:16px 18px}
+.key .k{font:12px/1.3 var(--mono);color:var(--dim);text-transform:uppercase;letter-spacing:.04em;margin-bottom:6px}
+.key .v{font-size:15px;line-height:1.45}
+
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.card{background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:20px 22px}
+.card h3{font-size:17px;margin:0 0 6px}
+.card p{font-size:15.5px;color:var(--ink-2);margin:0}
+.card .tag{font:12px/1 var(--mono);color:var(--accent);margin-bottom:10px;display:block}
+
+.job{display:grid;grid-template-columns:170px 1fr;gap:24px;padding:0 0 28px}
+.job:last-child{padding-bottom:0}
+.when{font:13.5px/1.6 var(--mono);color:var(--dim);padding-top:3px}
+.job h3{font-size:18px;margin:0}
+.org{color:var(--ink-2);margin:0 0 8px;font-size:15.5px}
+.job ul{margin:0;padding-left:18px}
+.job li{margin:0 0 6px;font-size:15.5px}
+.sub{margin-top:14px}
+.sub h4{font-size:16px;margin:0 0 6px}
+
+.contact p{max-width:none}
+.status{background:var(--accent);color:#e6f6f8;font:12.5px/1 var(--mono);display:flex;flex-wrap:wrap;gap:6px 22px;padding:9px 18px;margin-top:40px}
+.status span:last-child{margin-left:auto}
+
+@media (max-width:720px){
+  body{font-size:16px}
+  main{padding:0 18px}
+  .file{display:none}
+  .dots{display:none}
+  .bar nav a{padding:15px 10px}
+  .hero{grid-template-columns:1fr;gap:20px;padding:44px 0 36px}
+  .avatar{width:112px;height:112px;border-radius:14px}
+  h1{font-size:34px}
+  .role{font-size:18px}
+  .keys,.cards{grid-template-columns:1fr}
+  .job{grid-template-columns:1fr;gap:4px}
+  section{padding:40px 0}
+  .status span:last-child{margin-left:0}
+}
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="dots" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="file"><b>●</b>daniel-cardenas.md</div>
+  <nav aria-label="Sections">
+    <a href="#about"><span data-l="en">about</span><span data-l="es">sobre-mí</span></a>
+    <a href="#ai"><span data-l="en">ai-work</span><span data-l="es">trabajo-ia</span></a>
+    <a href="#experience"><span data-l="en">experience</span><span data-l="es">experiencia</span></a>
+    <a href="#certs"><span data-l="en">certifications</span><span data-l="es">certificaciones</span></a>
+    <a href="#contact"><span data-l="en">contact</span><span data-l="es">contacto</span></a>
+  </nav>
+  <div class="lang" role="group" aria-label="Language">
+    <button type="button" data-set="en" lang="en">EN</button>
+    <button type="button" data-set="es" lang="es">ES</button>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <img class="avatar" src="assets/photo.jpg" width="160" height="160" alt="Daniel Cárdenas">
+    <div>
+      <h1>Daniel Cárdenas</h1>
+      <p class="role">Senior Scrum Master · AI-Enabled Delivery</p>
+      <p class="meta">Guadalajara, Jalisco, México · EN B2 / ES <span data-l="en">native</span><span data-l="es">nativo</span></p>
+      <p class="open">
+        <span data-l="en"><strong>Open to:</strong> Senior Scrum Master, Agile Coach and Agile Delivery Manager roles.</span>
+        <span data-l="es"><strong>Abierto a:</strong> puestos de Senior Scrum Master, Agile Coach y Agile Delivery Manager.</span>
+      </p>
+      <ul class="links">
+        <li><a href="mailto:daniel13hp@gmail.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm9 7.2L4 7.3V17h16V7.3l-8 4.9ZM5.2 7l6.8 4.2L18.8 7H5.2Z"/></svg>daniel13hp@gmail.com</a></li>
+        <li><a href="https://www.linkedin.com/in/daniel-c%C3%A1rdenas-997115b2/" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.75h4v11H3v-11Zm6.5 0h3.8v1.5h.06c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.77 2.65 4.77 6.1v5.45h-4v-4.83c0-1.15-.02-2.63-1.6-2.63-1.6 0-1.85 1.25-1.85 2.55v4.91h-4v-11Z"/></svg>LinkedIn</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <section id="about">
+    <p class="label">// <span data-l="en">about</span><span data-l="es">sobre mí</span></p>
+    <h2><span data-l="en">About</span><span data-l="es">Sobre mí</span></h2>
+    <div data-l="en">
+      <p>I have 14 years in IT: four as a software developer and ten leading Agile teams. My work is giving delivery the visibility it needs — end-to-end feature tracking, lead time and flow metrics, and clear reporting for Product, Tech Leads and leadership.</p>
+      <p>Since 2025 I have extended that work to AI adoption: measuring how AI-assisted development affects delivery speed, rework and code quality, and coaching teams on practical AI use for problem solving, documentation and day-to-day operations.</p>
+      <p>I have built teams from scratch and implemented Agile in software, payroll, medical labs, invoicing and fintech.</p>
+    </div>
+    <div data-l="es">
+      <p>Tengo 14 años en TI: cuatro como desarrollador de software y diez liderando equipos ágiles. Mi trabajo es darle a la entrega la visibilidad que necesita: seguimiento de funcionalidades de punta a punta, lead time y métricas de flujo, y reportes claros para Producto, Tech Leads y dirección.</p>
+      <p>Desde 2025 extendí ese trabajo a la adopción de IA: medir cómo el desarrollo asistido por IA afecta la velocidad de entrega, el retrabajo y la calidad del código, y acompañar a los equipos en el uso práctico de IA para resolver problemas, documentar y operar.</p>
+      <p>He formado equipos desde cero e implementado Agile en software, nómina, laboratorios médicos, facturación y fintech.</p>
+    </div>
+    <div class="keys">
+      <div class="key">
+        <div class="k"><span data-l="en">Most recent</span><span data-l="es">Más reciente</span></div>
+        <div class="v"><span data-l="en">Agile Delivery Manager at Ontop, after four years as Scrum Master Lead there.</span><span data-l="es">Agile Delivery Manager en Ontop, tras cuatro años ahí como Scrum Master Lead.</span></div>
+      </div>
+      <div class="key">
+        <div class="k"><span data-l="en">Strongest project</span><span data-l="es">Proyecto principal</span></div>
+        <div class="v"><span data-l="en">An engineering performance platform for 8 teams and 30+ developers.</span><span data-l="es">Una plataforma de desempeño de ingeniería para 8 equipos y más de 30 desarrolladores.</span></div>
+      </div>
+      <div class="key">
+        <div class="k"><span data-l="en">Looking for</span><span data-l="es">Busco</span></div>
+        <div class="v"><span data-l="en">Senior Scrum Master, Agile Coach or Agile Delivery Manager roles where AI is part of delivery.</span><span data-l="es">Puestos de Senior Scrum Master, Agile Coach o Agile Delivery Manager donde la IA sea parte de la entrega.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="ai">
+    <p class="label">// <span data-l="en">ai-work</span><span data-l="es">trabajo-ia</span></p>
+    <h2><span data-l="en">AI for delivery and process</span><span data-l="es">IA para la entrega y los procesos</span></h2>
+    <div class="cards">
+      <article class="card">
+        <span class="tag">Ontop · 2025–2026</span>
+        <h3><span data-l="en">Engineering performance platform</span><span data-l="es">Plataforma de desempeño de ingeniería</span></h3>
+        <p data-l="en">Covers 8 teams and 30+ developers: cycle time, rework and WIP KPIs, with automated sprint analysis.</p>
+        <p data-l="es">Cubre 8 equipos y más de 30 desarrolladores: KPIs de cycle time, retrabajo y WIP, con análisis de sprint automatizado.</p>
+      </article>
+      <article class="card">
+        <span class="tag">Ontop · 2025–2026</span>
+        <h3><span data-l="en">Measuring AI-assisted delivery</span><span data-l="es">Medición de la entrega asistida por IA</span></h3>
+        <p data-l="en">A framework that tracks the quality (rework, cycle time), throughput and efficiency of AI-generated code, used to guide how teams adopt AI tools.</p>
+        <p data-l="es">Un marco que mide la calidad (retrabajo, cycle time), el throughput y la eficiencia del código generado con IA, y que orienta cómo los equipos adoptan herramientas de IA.</p>
+      </article>
+      <article class="card">
+        <span class="tag">Claude · Gemini</span>
+        <h3><span data-l="en">Automatic sprint summaries</span><span data-l="es">Resúmenes de sprint automáticos</span></h3>
+        <p data-l="en">Generative AI built into sprint analysis, producing summaries and recommendations for Tech Leads.</p>
+        <p data-l="es">IA generativa integrada al análisis de sprint, que produce resúmenes y recomendaciones para los Tech Leads.</p>
+      </article>
+      <article class="card">
+        <span class="tag">n8n · Jira · Slack</span>
+        <h3><span data-l="en">Automated monitoring</span><span data-l="es">Monitoreo automatizado</span></h3>
+        <p data-l="en">Pipelines for Jira data, Slack alerts, and system and security reports that replaced manual status work for PMs and Tech Leads.</p>
+        <p data-l="es">Flujos para datos de Jira, alertas en Slack y reportes de sistemas y seguridad que sustituyeron el trabajo manual de estatus de PMs y Tech Leads.</p>
+      </article>
+      <article class="card">
+        <span class="tag">Zendesk · Jira</span>
+        <h3><span data-l="en">Support view</span><span data-l="es">Vista de soporte</span></h3>
+        <p data-l="en">Combines Zendesk tickets with Jira status and the number of affected users, cutting the time needed to analyze support issues.</p>
+        <p data-l="es">Combina tickets de Zendesk con el estatus en Jira y el número de usuarios afectados, y reduce el tiempo para analizar incidencias de soporte.</p>
+      </article>
+      <article class="card">
+        <span class="tag"><span data-l="en">Dashboards</span><span data-l="es">Tableros</span></span>
+        <h3><span data-l="en">Real-time delivery dashboards</span><span data-l="es">Tableros de entrega en tiempo real</span></h3>
+        <p data-l="en">Lead time, cycle time, WIP and blockers across teams, replacing manual progress reports and showing risk before it became a missed commitment.</p>
+        <p data-l="es">Lead time, cycle time, WIP y bloqueos por equipo, en lugar de reportes manuales de avance, para ver el riesgo antes de que se volviera un compromiso incumplido.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="experience">
+    <p class="label">// <span data-l="en">experience</span><span data-l="es">experiencia</span></p>
+    <h2><span data-l="en">Experience</span><span data-l="es">Experiencia</span></h2>
+
+    <div class="job">
+      <div class="when">Oct 2021 — Nov 2026<br><span data-l="en">Remote</span><span data-l="es">Remoto</span></div>
+      <div>
+        <h3>Ontop</h3>
+        <div class="sub">
+          <h4>Agile Delivery Manager <span class="when">· 2025 — Nov 2026</span></h4>
+          <ul data-l="en">
+            <li>Designed delivery tracking across teams (lead time, cycle time, WIP, blockers) so Tech Leads and Product could see risk early.</li>
+            <li>Built real-time dashboards and a support view combining Zendesk tickets with Jira status.</li>
+            <li>Developed an engineering performance platform for 8 teams and 30+ developers.</li>
+            <li>Automated Slack monitoring and system alerts with n8n, including security reporting.</li>
+          </ul>
+          <ul data-l="es">
+            <li>Diseñé el seguimiento de la entrega entre equipos (lead time, cycle time, WIP, bloqueos) para que Tech Leads y Producto vieran el riesgo a tiempo.</li>
+            <li>Construí tableros en tiempo real y una vista de soporte que cruza tickets de Zendesk con el estatus en Jira.</li>
+            <li>Desarrollé una plataforma de desempeño de ingeniería para 8 equipos y más de 30 desarrolladores.</li>
+            <li>Automaticé el monitoreo en Slack y las alertas de sistemas con n8n, incluidos reportes de seguridad.</li>
+          </ul>
+        </div>
+        <div class="sub">
+          <h4>Scrum Master Lead <span class="when">· Oct 2021 — Dec 2025</span></h4>
+          <ul data-l="en">
+            <li>Led up to 6 Agile teams at once, setting up Scrum practices and working agreements that made delivery more predictable.</li>
+            <li>Implemented Jira from scratch (boards, workflows, configuration) as the single source of truth for delivery status.</li>
+          </ul>
+          <ul data-l="es">
+            <li>Lideré hasta 6 equipos ágiles a la vez, con prácticas de Scrum y acuerdos de trabajo que hicieron la entrega más predecible.</li>
+            <li>Implementé Jira desde cero (tableros, flujos, configuración) como fuente única del estatus de entrega.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="job">
+      <div class="when">Sep 2019 — Oct 2021<br><span data-l="en">Remote</span><span data-l="es">Remoto</span></div>
+      <div>
+        <h3>CtrlSun</h3>
+        <p class="org">Scrum Master / Project Manager</p>
+        <ul data-l="en">
+          <li>Led the implementation of Scrum and Agile practices from zero, creating a structured delivery process.</li>
+          <li>Managed Jira configuration and improvement; aligned development teams and Product Owners with delivery tracking, risk management and stakeholder visibility.</li>
+        </ul>
+        <ul data-l="es">
+          <li>Encabecé la implementación de Scrum y prácticas ágiles desde cero, con un proceso de entrega estructurado.</li>
+          <li>Administré y mejoré la configuración de Jira; alineé a desarrollo y Product Owners con seguimiento de entrega, gestión de riesgos y visibilidad para stakeholders.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="job">
+      <div class="when">May 2019 — Sep 2019<br><span data-l="en">Hybrid</span><span data-l="es">Híbrido</span></div>
+      <div>
+        <h3>Adventa</h3>
+        <p class="org">Scrum Master / Support</p>
+        <ul data-l="en"><li>Facilitated Scrum ceremonies and validated user stories for a mobile app; handled customer support and tickets in Jira.</li></ul>
+        <ul data-l="es"><li>Facilité ceremonias de Scrum y validé historias de usuario de una app móvil; atendí soporte a clientes y tickets en Jira.</li></ul>
+      </div>
+    </div>
+
+    <div class="job">
+      <div class="when">Oct 2017 — May 2019<br><span data-l="en">Hybrid</span><span data-l="es">Híbrido</span></div>
+      <div>
+        <h3>Svitla</h3>
+        <p class="org">Scrum Master</p>
+        <ul data-l="en">
+          <li>Monitored burndown and delivery metrics in Team Foundation Server and built management and executive reports.</li>
+          <li>Documented internal processes and delivery standards; worked with Product Owners on backlog refinement and planning.</li>
+        </ul>
+        <ul data-l="es">
+          <li>Di seguimiento a burndown y métricas de entrega en Team Foundation Server y elaboré reportes gerenciales y ejecutivos.</li>
+          <li>Documenté procesos internos y estándares de entrega; trabajé con Product Owners en refinamiento y planeación del backlog.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="job">
+      <div class="when">Sep 2013 — Oct 2017<br><span data-l="en">On-site</span><span data-l="es">Presencial</span></div>
+      <div>
+        <h3>DWsoftware</h3>
+        <p class="org">Scrum Master / Technical Lead / Developer</p>
+        <ul data-l="en"><li>Progressed from software developer to technical lead while staying hands-on, leading technical decisions for clients across industries.</li></ul>
+        <ul data-l="es"><li>Pasé de desarrollador a líder técnico sin dejar de programar, tomando decisiones técnicas para clientes de distintas industrias.</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="certs">
+    <p class="label">// <span data-l="en">certifications</span><span data-l="es">certificaciones</span></p>
+    <h2><span data-l="en">Education &amp; certifications</span><span data-l="es">Formación y certificaciones</span></h2>
+    <div class="cards">
+      <article class="card">
+        <span class="tag">Oct 2016</span>
+        <h3>Scrum Master Certification</h3>
+        <p><span data-l="en">Credential ID</span><span data-l="es">ID de credencial</span> 21742037021555</p>
+      </article>
+      <article class="card">
+        <span class="tag">Nov 2020</span>
+        <h3>Scrum Fundamentals Certified</h3>
+        <p><span data-l="en">Credential ID</span><span data-l="es">ID de credencial</span> 815815</p>
+      </article>
+      <article class="card">
+        <span class="tag">CETI · México</span>
+        <h3><span data-l="en">Mechatronic Engineer</span><span data-l="es">Ingeniero Mecatrónico</span></h3>
+        <p>Centro de Enseñanza Técnica Industrial</p>
+      </article>
+      <article class="card">
+        <span class="tag"><span data-l="en">Languages</span><span data-l="es">Idiomas</span></span>
+        <h3><span data-l="en">English B2 · Spanish native</span><span data-l="es">Inglés B2 · español nativo</span></h3>
+        <p><span data-l="en">Upper-intermediate English.</span><span data-l="es">Inglés intermedio-alto.</span></p>
+      </article>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <p class="label">// <span data-l="en">contact</span><span data-l="es">contacto</span></p>
+    <h2><span data-l="en">Contact</span><span data-l="es">Contacto</span></h2>
+    <p data-l="en">The fastest way to reach me is email: <a href="mailto:daniel13hp@gmail.com">daniel13hp@gmail.com</a>. You can also find me on <a href="https://www.linkedin.com/in/daniel-c%C3%A1rdenas-997115b2/" rel="noopener">LinkedIn</a>. I'm based in Guadalajara, Mexico.</p>
+    <p data-l="es">La forma más rápida de contactarme es por correo: <a href="mailto:daniel13hp@gmail.com">daniel13hp@gmail.com</a>. También estoy en <a href="https://www.linkedin.com/in/daniel-c%C3%A1rdenas-997115b2/" rel="noopener">LinkedIn</a>. Vivo en Guadalajara, México.</p>
+  </section>
+</main>
+
+<footer class="status">
+  <span>● main</span>
+  <span>Guadalajara, MX</span>
+  <span>UTF-8</span>
+  <span>© <span id="yr">2026</span> Daniel Cárdenas</span>
+</footer>
+
+<script>
+(function(){
+  var root=document.documentElement;
+  function set(l){root.lang=l;try{localStorage.setItem('lang',l)}catch(e){}}
+  try{var s=localStorage.getItem('lang');if(s==='es'||s==='en')root.lang=s}catch(e){}
+  document.querySelectorAll('.lang button').forEach(function(b){b.addEventListener('click',function(){set(b.dataset.set)})});
+  document.getElementById('yr').textContent=new Date().getFullYear();
+  var links=[].slice.call(document.querySelectorAll('.bar nav a'));
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id)})}})},{rootMargin:'-40% 0px -55% 0px'});
+    document.querySelectorAll('main section[id]').forEach(function(s){io.observe(s)});
+  }
+})();
+</script>
+</body>
+</html>
