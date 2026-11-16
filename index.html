@@ -94,6 +94,14 @@ p{margin:0 0 16px}
   section{padding:40px 0}
   .status span:last-child{margin-left:0}
 }
+/* theme: follows the visitor's system setting */
+:root{color-scheme:light dark;--open-bg:#e8f3f4;--open-ink:#134c54;--open-line:#c7e2e5;--hover:#134c54}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--accent:#5fc3cf;--ink:#e6e7ea;--ink-2:#b4b8c1;--dim:#8a8f9c;--paper:#121317;--rule:#2a2c33;--card:#1b1d22;--open-bg:#11282b;--open-ink:#a9e3ea;--open-line:#1f4a50;--hover:#8fdbe4}}
+:root[data-theme=dark]{color-scheme:dark;--accent:#5fc3cf;--ink:#e6e7ea;--ink-2:#b4b8c1;--dim:#8a8f9c;--paper:#121317;--rule:#2a2c33;--card:#1b1d22;--open-bg:#11282b;--open-ink:#a9e3ea;--open-line:#1f4a50;--hover:#8fdbe4}
+:root[data-theme=light]{color-scheme:light}
+a:hover{color:var(--hover)}
+.open{background:var(--open-bg);color:var(--open-ink);border-color:var(--open-line)}
+.status{background:#1f6f7a}
 </style>
 </head>
 <body>
